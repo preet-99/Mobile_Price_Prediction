@@ -119,8 +119,9 @@ header[data-testid="stHeader"] {
 <div class="custom-footer">
     <div>© 2026 Mobile Price Prediction</div>
     <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#docs">Docs</a>
+       <a href="mailto:preetvishwakarma9999@gmail.com" target="_blank">Email</a>
+        <a href="https://github.com/preet-99" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/preet-vishwakarma-b775a7317/" target="_blank">LinkedIn</a>
     </div>
 </div>
 """,
