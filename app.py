@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import tensorflow as tf
+import keras
 
 # Page Config
 st.set_page_config(page_title="Mobile Price Prediction", layout="wide")
@@ -130,7 +131,7 @@ header[data-testid="stHeader"] {
 # 1. Load Model and Scaler
 @st.cache_resource
 def load_assets():
-    model = tf.keras.models.load_model("model.keras")
+    model = keras.models.load_model("model.keras")
     with open("scaler.pkl", "rb") as file:
         scaler = pickle.load(file)
     return model, scaler
