@@ -6,4 +6,3 @@ tensorboard
 matplotlib
 streamlit
 keras
-scikeras
