@@ -16,13 +16,13 @@ header[data-testid="stHeader"] {
     z-index: 1001 !important;
 }
 
-/* 2. Container spacing fix */
+/* Container spacing fix */
 .block-container {
     padding-top: 4.5rem !important;
     padding-bottom: 4.5rem !important;
 }
 
-/* 3. Smooth Hardware-Accelerated Header */
+/* Custom Header */
 .custom-header {
     position: fixed;
     top: 0;
@@ -49,11 +49,7 @@ header[data-testid="stHeader"] {
     color: #f8fafc;
 }
 
-.header-tag:hover {
-    transform: translateY(-1px);
-}
-
-/* 4. Smooth Hardware-Accelerated Footer */
+/* Custom Footer */
 .custom-footer {
     position: fixed;
     bottom: 0;
@@ -64,7 +60,7 @@ header[data-testid="stHeader"] {
     border-top: 1px solid #1f293d;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 0 1.5rem;
     z-index: 999;
     font-size: 0.8rem;
@@ -75,7 +71,6 @@ header[data-testid="stHeader"] {
 .footer-links a {
     color: #818cf8;
     text-decoration: none;
-    margin-left: 14px;
     transition: color 0.15s ease;
 }
 
@@ -96,11 +91,6 @@ header[data-testid="stHeader"] {
     .header-brand {
         font-size: 0.95rem;
     }
-    .header-tag {
-        margin-right: 65px;
-        font-size: 0.68rem;
-        padding: 2px 8px;
-    }
     .block-container {
         padding-top: 4rem !important;
         padding-bottom: 4rem !important;
@@ -117,17 +107,19 @@ header[data-testid="stHeader"] {
 
 <!-- Footer -->
 <div class="custom-footer">
-    <div>© 2026 Mobile Price Prediction</div>
-    <div class="footer-links">
-       <a href="mailto:preetvishwakarma9999@gmail.com" target="_blank">Email</a>
-        <a href="https://github.com/preet-99" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/preet-vishwakarma-b775a7317/" target="_blank">LinkedIn</a>
+    <div>
+        <span>© 2026 Mobile Price Prediction</span>
+        <span style="margin: 0 8px; color: #475569;">|</span>
+        <span class="footer-links">
+            <a href="preetvishwakarma9999@gmail.com" target="_blank" style="margin-right: 12px;">Email</a>
+            <a href="https://github.com/preet-99" target="_blank" style="margin-right: 12px;">GitHub</a>
+            <a href="https://www.linkedin.com/in/preet-vishwakarma-b775a7317/" target="_blank">LinkedIn</a>
+        </span>
     </div>
 </div>
 """,
     unsafe_allow_html=True,
 )
-
 
 # 1. Load Model and Scaler
 @st.cache_resource
